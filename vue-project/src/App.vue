@@ -1,31 +1,29 @@
 <template>
-  <div>
-    姓名: <input v-model="userName" /> {{ userName }}<br />
-    薪水: <input type="number" v-model="salary" /> {{ salary }}<br />
-    <button v-on:click="addSalary">提交</button>
+  <div id="app">
+    <h1>Hello App!</h1>
+    <p>
+      <a href="">首页</a>
+      <a href="">关于</a>
+      <a href="">新闻</a>
+    </p>
+    <div class="content"></div>
   </div>
 </template>
 
-<script setup lang="ts">
-import { ref } from "vue";
-const userName = ref("roy");
-const salary = ref(15000);
-const addSalary = () => {
-  salary.value += 1000;
-};
+<script lang="ts" setup>
+// vue3写法
 </script>
 
-<style scoped>
-.userInfo {
-  background-color: aqua;
-  width: 80%;
-  padding: 10px;
+<style>
+a {
+  margin: 10px;
 }
 
-.userInfo span {
-  background-color: yellow;
-  margin-left: 10px;
-  padding: 5px;
-  border-radius: 5px;
+.content {
+  background: yellowgreen;
+  widows: 10%;
+  height: 400px;
+  border: 1cap;
+  border-radius: 10px;
 }
 </style>
